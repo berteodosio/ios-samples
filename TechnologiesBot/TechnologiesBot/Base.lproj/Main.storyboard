@@ -33,31 +33,34 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kotlin, Swift, Java, Android, iOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocq-J9-0yf">
-                                <rect key="frame" x="24" y="174" width="366" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="taat, aetoiahito, et,t aoetata, tea,t ataea taotat , etatat, eta," lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocq-J9-0yf">
+                                <rect key="frame" x="24" y="174" width="366" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type technology here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42R-md-zvs">
-                                <rect key="frame" x="24" y="211" width="366" height="30"/>
+                                <rect key="frame" x="24" y="231" width="366" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rk2-af-uXp">
-                                <rect key="frame" x="24" y="257" width="366" height="40"/>
+                                <rect key="frame" x="24" y="277" width="366" height="40"/>
                                 <state key="normal" image="add-show-btn"/>
+                                <connections>
+                                    <action selector="onAddShowButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ltu-K6-w7r"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KOTLIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NkT-q2-7UY">
-                                <rect key="frame" x="24" y="321" width="366" height="41"/>
+                                <rect key="frame" x="24" y="341" width="366" height="41"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWc-4u-jvV">
-                                <rect key="frame" x="24" y="386" width="366" height="40"/>
+                                <rect key="frame" x="24" y="406" width="366" height="40"/>
                                 <state key="normal" image="binge-btn"/>
                             </button>
                         </subviews>
@@ -91,6 +94,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="chooseShowButton" destination="bWc-4u-jvV" id="2lX-nH-rzS"/>
+                        <outlet property="responseLabel" destination="NkT-q2-7UY" id="YJj-Oj-duA"/>
+                        <outlet property="showTextField" destination="42R-md-zvs" id="Qb5-hn-xgm"/>
+                        <outlet property="showsLabel" destination="ocq-J9-0yf" id="OLp-TC-vOw"/>
+                        <outlet property="technologiesLabel" destination="SGE-Zy-s9e" id="NVw-aj-yf3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
