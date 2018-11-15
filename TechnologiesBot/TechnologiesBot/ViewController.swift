@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         shows.append(showText)
         displayShows()
         showTextField.text = ""
+        displayRandomButtonIfNecessary()
     }
     
     private func displayShows() {
@@ -42,5 +43,15 @@ class ViewController: UIViewController {
         }
     }
     
+    private func displayRandomButtonIfNecessary() {
+        if shows.count >= 2 {
+            chooseShowButton.isHidden = false
+        }
+    }
+    
+    @IBAction func onChooseShowButtonClick(_ sender: Any) {
+        responseLabel.text = shows.randomElement()
+        responseLabel.isHidden = false
+    }
 }
 
