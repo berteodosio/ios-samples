@@ -12,11 +12,13 @@ class RecipeViewController: UIViewController {
     
     var selectedCategory: String!
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     private lazy var recipes: [Recipe] = {
         return DataSet().getRecipes(forCategoryTitle: selectedCategory)
     }()
-
-    @IBOutlet weak var collectionView: UICollectionView!
+    
+    private var selectedRecipe: Recipe?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,11 @@ class RecipeViewController: UIViewController {
     private func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let recipeDetailViewController = segue.destination as? RecipeDetailViewController else { return }
+        recipeDetailViewController.recipe = self.selectedRecipe
     }
 
 }
@@ -42,7 +49,8 @@ extension RecipeViewController: UICollectionViewDelegateFlowLayout {
 extension RecipeViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //
+        self.selectedRecipe = recipes[indexPath.row]
+        performSegue(withIdentifier: "navigateToRecipeDetails", sender: self)
     }
     
 }

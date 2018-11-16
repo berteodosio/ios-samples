@@ -141,11 +141,62 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="00Z-Oy-xSq" id="aI9-04-MRO"/>
+                        <segue destination="xFw-y8-pQm" kind="show" identifier="navigateToRecipeDetails" id="HUp-4g-s3L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C1e-WK-Zt3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1828.985507246377" y="790.84821428571422"/>
+        </scene>
+        <!--Recipe Detail View Controller-->
+        <scene sceneID="vtj-l3-WjH">
+            <objects>
+                <viewController id="xFw-y8-pQm" customClass="RecipeDetailViewController" customModule="GoodEatings" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NeV-qH-U1X">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="07P-7e-oLw">
+                                <rect key="frame" x="0.0" y="88" width="414" height="272"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="272" id="y7j-cM-KvC"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akL-46-ad2">
+                                <rect key="frame" x="127.5" y="384" width="159" height="42"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="32"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTr-O7-2Fm">
+                                <rect key="frame" x="24" y="450" width="366" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wTr-O7-2Fm" firstAttribute="leading" secondItem="Hhi-IF-jfh" secondAttribute="leading" constant="24" id="1Hg-k6-zn2"/>
+                            <constraint firstItem="07P-7e-oLw" firstAttribute="trailing" secondItem="Hhi-IF-jfh" secondAttribute="trailing" id="L2G-qV-c9a"/>
+                            <constraint firstItem="wTr-O7-2Fm" firstAttribute="top" secondItem="akL-46-ad2" secondAttribute="bottom" constant="24" id="Mmh-1I-fGA"/>
+                            <constraint firstItem="akL-46-ad2" firstAttribute="centerX" secondItem="NeV-qH-U1X" secondAttribute="centerX" id="SFc-D4-Y91"/>
+                            <constraint firstItem="akL-46-ad2" firstAttribute="top" secondItem="07P-7e-oLw" secondAttribute="bottom" constant="24" id="TQh-fe-zTS"/>
+                            <constraint firstItem="07P-7e-oLw" firstAttribute="leading" secondItem="Hhi-IF-jfh" secondAttribute="leading" id="bBM-jw-e3x"/>
+                            <constraint firstItem="07P-7e-oLw" firstAttribute="top" secondItem="Hhi-IF-jfh" secondAttribute="top" id="ho5-4V-Efk"/>
+                            <constraint firstItem="Hhi-IF-jfh" firstAttribute="trailing" secondItem="wTr-O7-2Fm" secondAttribute="trailing" constant="24" id="qEd-fx-xJy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hhi-IF-jfh"/>
+                    </view>
+                    <connections>
+                        <outlet property="recipeDescription" destination="wTr-O7-2Fm" id="MP4-Ec-Idp"/>
+                        <outlet property="recipeImage" destination="07P-7e-oLw" id="aYy-t2-ld9"/>
+                        <outlet property="recipeTitle" destination="akL-46-ad2" id="1G9-WP-WNF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="czX-Lo-jF7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2669.5652173913045" y="790.84821428571422"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JPE-WS-G0O">
