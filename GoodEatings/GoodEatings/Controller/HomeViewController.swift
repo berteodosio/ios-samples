@@ -14,6 +14,8 @@ class HomeViewController: UIViewController {
     
     private let dataSet = DataSet()
     
+    private var selectedCategory: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCategoriesTableView()
@@ -22,6 +24,11 @@ class HomeViewController: UIViewController {
     private func configureCategoriesTableView() {
         categoriesTableView.delegate = self
         categoriesTableView.dataSource = self
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let recipeViewController = segue.destination as? RecipeViewController else { return }
+        recipeViewController.selectedCategory = self.selectedCategory
     }
 
 }
@@ -46,5 +53,10 @@ extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedCategory = dataSet.categories[indexPath.row].title
+        performSegue(withIdentifier: "navigateToRecipeViewController", sender: self)
     }
 }

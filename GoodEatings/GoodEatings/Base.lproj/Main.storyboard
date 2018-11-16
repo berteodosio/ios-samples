@@ -70,11 +70,27 @@
                     <navigationItem key="navigationItem" id="zsh-Qr-7Dp"/>
                     <connections>
                         <outlet property="categoriesTableView" destination="1eb-iu-NYh" id="JL6-Nj-vqO"/>
+                        <segue destination="fOc-1u-WSI" kind="show" identifier="navigateToRecipeViewController" id="4DI-7a-mZA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="952.79999999999995" y="790.25487256371821"/>
+        </scene>
+        <!--Recipe View Controller-->
+        <scene sceneID="lMo-v1-Fxc">
+            <objects>
+                <viewController id="fOc-1u-WSI" customClass="RecipeViewController" customModule="GoodEatings" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t5c-Cg-QPM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="v0o-lm-JAW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C1e-WK-Zt3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1830" y="791"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JPE-WS-G0O">
