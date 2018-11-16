@@ -29,8 +29,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="173.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burger0" translatesAutoresizingMaskIntoConstraints="NO" id="fFH-9b-2mL">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="173.5"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burger0" translatesAutoresizingMaskIntoConstraints="NO" id="fFH-9b-2mL">
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="165.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EAT THIS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9K-uv-UtV">
                                                     <rect key="frame" x="15" y="11" width="345" height="151.5"/>
@@ -42,10 +42,10 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="g9K-uv-UtV" secondAttribute="trailing" id="2LX-2F-d20"/>
                                                 <constraint firstItem="g9K-uv-UtV" firstAttribute="leading" secondItem="44o-c5-XFS" secondAttribute="leadingMargin" id="58h-ZT-9dk"/>
-                                                <constraint firstAttribute="trailing" secondItem="fFH-9b-2mL" secondAttribute="trailing" id="8ql-UJ-7qQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="fFH-9b-2mL" secondAttribute="trailing" constant="8" id="8ql-UJ-7qQ"/>
                                                 <constraint firstItem="g9K-uv-UtV" firstAttribute="centerY" secondItem="44o-c5-XFS" secondAttribute="centerY" id="F2x-br-r7D"/>
-                                                <constraint firstItem="fFH-9b-2mL" firstAttribute="leading" secondItem="44o-c5-XFS" secondAttribute="leading" id="Poy-i5-tul"/>
-                                                <constraint firstAttribute="bottom" secondItem="fFH-9b-2mL" secondAttribute="bottom" id="QTc-n8-qPe"/>
+                                                <constraint firstItem="fFH-9b-2mL" firstAttribute="leading" secondItem="44o-c5-XFS" secondAttribute="leading" constant="8" id="Poy-i5-tul"/>
+                                                <constraint firstAttribute="bottom" secondItem="fFH-9b-2mL" secondAttribute="bottom" constant="8" id="QTc-n8-qPe"/>
                                                 <constraint firstItem="fFH-9b-2mL" firstAttribute="top" secondItem="44o-c5-XFS" secondAttribute="top" id="XZS-S9-HZE"/>
                                                 <constraint firstItem="g9K-uv-UtV" firstAttribute="top" secondItem="44o-c5-XFS" secondAttribute="topMargin" id="lVD-LD-B2z"/>
                                             </constraints>
