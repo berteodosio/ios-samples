@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		2D2991F2219E2E6C00408084 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2991F1219E2E6C00408084 /* AppDelegate.swift */; };
-		2D2991F4219E2E6C00408084 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2991F3219E2E6C00408084 /* ViewController.swift */; };
+		2D2991F4219E2E6C00408084 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2991F3219E2E6C00408084 /* HomeViewController.swift */; };
 		2D2991F7219E2E6C00408084 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D2991F5219E2E6C00408084 /* Main.storyboard */; };
 		2D2991F9219E2E6D00408084 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D2991F8219E2E6D00408084 /* Assets.xcassets */; };
 		2D2991FC219E2E6D00408084 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D2991FA219E2E6D00408084 /* LaunchScreen.storyboard */; };
+		2D299204219E3F9900408084 /* InputTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D299203219E3F9900408084 /* InputTextViewController.swift */; };
+		2D299206219E3FD800408084 /* SomethingTypedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D299205219E3FD800408084 /* SomethingTypedDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2D2991EE219E2E6C00408084 /* ViewControllerCommunicationSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewControllerCommunicationSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D2991F1219E2E6C00408084 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2D2991F3219E2E6C00408084 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2D2991F3219E2E6C00408084 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2D2991F6219E2E6C00408084 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D2991F8219E2E6D00408084 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D2991FB219E2E6D00408084 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D2991FD219E2E6D00408084 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D299203219E3F9900408084 /* InputTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextViewController.swift; sourceTree = "<group>"; };
+		2D299205219E3FD800408084 /* SomethingTypedDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomethingTypedDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				2D2991F1219E2E6C00408084 /* AppDelegate.swift */,
-				2D2991F3219E2E6C00408084 /* ViewController.swift */,
+				2D2991F3219E2E6C00408084 /* HomeViewController.swift */,
 				2D2991F5219E2E6C00408084 /* Main.storyboard */,
 				2D2991F8219E2E6D00408084 /* Assets.xcassets */,
 				2D2991FA219E2E6D00408084 /* LaunchScreen.storyboard */,
 				2D2991FD219E2E6D00408084 /* Info.plist */,
+				2D299203219E3F9900408084 /* InputTextViewController.swift */,
+				2D299205219E3FD800408084 /* SomethingTypedDelegate.swift */,
 			);
 			path = ViewControllerCommunicationSample;
 			sourceTree = "<group>";
@@ -135,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D2991F4219E2E6C00408084 /* ViewController.swift in Sources */,
+				2D2991F4219E2E6C00408084 /* HomeViewController.swift in Sources */,
+				2D299204219E3F9900408084 /* InputTextViewController.swift in Sources */,
+				2D299206219E3FD800408084 /* SomethingTypedDelegate.swift in Sources */,
 				2D2991F2219E2E6C00408084 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
