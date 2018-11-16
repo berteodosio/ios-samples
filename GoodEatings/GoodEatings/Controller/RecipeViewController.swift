@@ -30,7 +30,20 @@ class RecipeViewController: UIViewController {
 
 }
 
+extension RecipeViewController: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let screenWidth = view.bounds.width
+        let cellDimension = (screenWidth / 2) - 30
+        return CGSize(width: cellDimension, height: cellDimension)
+    }
+}
+
 extension RecipeViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //
+    }
     
 }
 
