@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController {
    
     @IBOutlet weak var categoriesTableView: UITableView!
     
@@ -23,14 +23,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         categoriesTableView.delegate = self
         categoriesTableView.dataSource = self
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSet.categories.count
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
-    }
+
+}
+
+extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
@@ -40,6 +36,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.configureFoodCategory(dataSet.categories[indexPath.row])
         return cell
     }
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataSet.categories.count
+    }
 }
 
+extension HomeViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
+}
