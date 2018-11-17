@@ -10,25 +10,25 @@ import UIKit
 
 class PersonRepository {
 
-    func getRandomPersonUrlSession(_ completion: @escaping (Person?) -> Void) {
-        guard let url = URL(string: Endpoints.PERSON_ENDPOINT) else { return }
+    func getRandomPersonUrlSession(randomPersonId: Int, _ completion: @escaping (Person?) -> Void) {
+        guard let url = URL(string: Endpoints.PERSON_ENDPOINT + "\(randomPersonId)") else { return }
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard error == nil else {
                 debugPrint("Error happend; error = \(error!)")
-                completion(nil)
+                DispatchQueue.main.async { completion(nil) }
                 return
             }
             
-            guard let data = data else { completion(nil); return }
+            guard let data = data else { DispatchQueue.main.async { completion(nil) }; return }
             
             do {
                 let jsonAny = try JSONSerialization.jsonObject(with: data, options: [])
                 guard let json = jsonAny as? [String : Any] else { return }
                 let person = self.parsePersonFromJson(json)
-                completion(person)
+                DispatchQueue.main.async { completion(person) }
             } catch {
                 debugPrint("Error parsing json")
-                completion(nil)
+                DispatchQueue.main.async { completion(nil) }
             }
         }
         task.resume()
