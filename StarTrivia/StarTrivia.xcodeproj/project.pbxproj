@@ -19,6 +19,7 @@
 		2D517554219FA691002F72CD /* BlackBackgroundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D517553219FA691002F72CD /* BlackBackgroundButton.swift */; };
 		2D517559219FB105002F72CD /* PersonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D517558219FB105002F72CD /* PersonRepository.swift */; };
 		2D51755B219FB159002F72CD /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D51755A219FB159002F72CD /* Endpoints.swift */; };
+		2D51755F219FB727002F72CD /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D51755E219FB727002F72CD /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		2D517553219FA691002F72CD /* BlackBackgroundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackBackgroundButton.swift; sourceTree = "<group>"; };
 		2D517558219FB105002F72CD /* PersonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRepository.swift; sourceTree = "<group>"; };
 		2D51755A219FB159002F72CD /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		2D51755E219FB727002F72CD /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 		2D517550219FA071002F72CD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2D51755E219FB727002F72CD /* Person.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				2D517552219FA638002F72CD /* BlackBackgroundView.swift in Sources */,
 				2D29921C219E6FCC00408084 /* AppDelegate.swift in Sources */,
 				2D517554219FA691002F72CD /* BlackBackgroundButton.swift in Sources */,
+				2D51755F219FB727002F72CD /* Person.swift in Sources */,
 				2D51755B219FB159002F72CD /* Endpoints.swift in Sources */,
 				2D517559219FB105002F72CD /* PersonRepository.swift in Sources */,
 			);
