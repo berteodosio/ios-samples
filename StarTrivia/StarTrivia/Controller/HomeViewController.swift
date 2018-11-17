@@ -25,7 +25,7 @@ class HomeViewController: UIViewController {
     
     @IBAction func onRandomClick(_ sender: Any) {
         let randomId = Int.random(in: 0...87)
-        personRepository.getRandomPersonUrlSession(randomPersonId: randomId) { (person) in
+        personRepository.getRandomPerson(randomPersonId: randomId) { (person) in
             guard let person = person else { self.displayErrorLoadingPerson(); return }
             self.displayPerson(person)
         }

@@ -7,9 +7,26 @@
 //
 
 import UIKit
+import Alamofire
 
 class PersonRepository {
+    
+    func getRandomPerson(randomPersonId: Int, _ completion: @escaping (Person?) -> Void) {
+        guard let url = URL(string: Endpoints.PERSON_ENDPOINT + "\(randomPersonId)") else { return }
+        Alamofire.request(url).responseJSON { (response) in
+            guard response.error == nil else {
+                debugPrint("Error happend; error = \(response.error!.localizedDescription)")
+                DispatchQueue.main.async { completion(nil) }
+                return
+            }
+            
+            guard let json = response.result.value as? [String : Any] else { DispatchQueue.main.async { completion(nil) }; return }
+            let person = self.parsePersonFromJson(json)
+            DispatchQueue.main.async { completion(person) }
+        }
+    }
 
+    // Old parsing with URLSession (without Alamofire)
     func getRandomPersonUrlSession(randomPersonId: Int, _ completion: @escaping (Person?) -> Void) {
         guard let url = URL(string: Endpoints.PERSON_ENDPOINT + "\(randomPersonId)") else { return }
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
